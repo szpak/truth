@@ -162,6 +162,21 @@
           </execution>
         </executions>
       </plugin>
+      <plugin>
+         <groupId>org.pitest</groupId>
+         <artifactId>pitest-maven</artifactId>
+         <version>1.2.2</version>
+         <configuration>
+           <targetClasses>
+             <param>com.google.common.truth*</param>
+           </targetClasses>
+           <targetTests>
+             <param>com.google.common.truth*</param>
+           </targetTests>
+           <!--    <verbose>true</verbose> -->
+           <!--    <threads>4</threads> -->
+         </configuration>
+       </plugin>
     </plugins>
   </build>
   <reporting>
